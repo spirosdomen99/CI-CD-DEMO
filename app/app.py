@@ -6,9 +6,9 @@ todos = []
 
 @app.route('/')
 def home():
- return render_template('index.html' , todos=todos)
+ return render_template('index.html',todos=todos)
 
-@app.route('/add', methods=['POST'])
+@app.route('/add',methods=['POST'])
 def add():
  task = request.form.get('task')
  if task:
